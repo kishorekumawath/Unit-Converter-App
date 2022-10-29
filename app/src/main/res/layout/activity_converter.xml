@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".converter_activity"
+    android:orientation="vertical"
+    android:id="@+id/RLview"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/MainColor"
+            android:minHeight="?attr/actionBarSize"
+            android:text="Title"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="From"
+                    android:textColor="@color/MainColor"
+                    android:textSize="25dp"
+                    android:textStyle="bold">
+                </TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/To"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.751"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="To"
+                    android:textColor="@color/MainColor"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/FromLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meter"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"/>
+        <EditText
+            android:id="@+id/fromValue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/backgroundbtn"
+            android:elevation="3dp"
+            android:hint="Enter the Value"
+            android:textCursorDrawable="@drawable/cursoreditview"
+            android:padding="10dp"
+            android:layout_marginHorizontal="40dp" />
+        <TextView
+            android:id="@+id/ToLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kilometer"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="10dp"/>
+        <TextView
+            android:id="@+id/ToValue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/backgroundbtn"
+            android:elevation="3dp"
+            android:text="0"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textCursorDrawable="@drawable/cursoreditview"
+            android:layout_marginHorizontal="40dp"
+            android:padding="10dp"
+            android:inputType="number"/>
+        <Button
+            android:id="@+id/Result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cursoreditview"
+            android:padding="15dp"
+            android:text="Get Answer"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/List_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
